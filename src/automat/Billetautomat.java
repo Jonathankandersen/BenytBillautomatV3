@@ -131,8 +131,4 @@ public class Billetautomat {
     public boolean erMontør() {
         return montørtilstand;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 65f0df06ad7fe9d18628406bb70973f1fd9e2414
