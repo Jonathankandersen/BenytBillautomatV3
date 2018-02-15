@@ -41,7 +41,7 @@ public class BenytBilletautomat
 			}
 			else if (valg==3) {
 				int beløb = automat.returpenge();
-				System.out.println("Du fik "+beløb+" retur retur");
+				System.out.println("Du fik "+beløb+" retur");
 			}
 			else if (valg==10) {
 				System.out.print("Skriv kode: ");
