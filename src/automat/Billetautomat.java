@@ -94,7 +94,7 @@ public class Billetautomat {
 
 	public int getAntalBilletterSolgt() {
 		if (montørtilstand) {
-			return antalBilletterSolgt;
+			return antalBilletterSolgt; //Test
 		} else {
 			System.out.println("Afvist - log ind først");
 			return 0;
