@@ -1,4 +1,4 @@
-package automat;
+package automat; //baseline
 /**
  * Model af en simpel billetautomat til enkeltbilletter med én fast pris.
  */
@@ -94,7 +94,7 @@ public class Billetautomat {
 
 	public int getAntalBilletterSolgt() {
 		if (montørtilstand) {
-			return antalBilletterSolgt; //Test 2
+			return antalBilletterSolgt;
 		} else {
 			System.out.println("Afvist - log ind først");
 			return 0;
