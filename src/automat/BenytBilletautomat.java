@@ -1,4 +1,4 @@
-package automat;
+package automat; //Baseline
 
 public class BenytBilletautomat {
 
