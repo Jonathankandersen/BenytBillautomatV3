@@ -43,7 +43,6 @@ public class BenytBilletautomat {
                 }
                 case 3: {
                     int beløb = automat.returpenge();
-                    System.out.println("Du fik " + beløb + " retur");
                     break;
 
                 }
