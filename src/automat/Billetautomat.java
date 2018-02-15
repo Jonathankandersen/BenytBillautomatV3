@@ -35,7 +35,7 @@ public class Billetautomat {
         if (beløb > 0) {
             balance = balance + beløb;
 
-        } else if (beløb < 0) {
+        } else if (beløb < 0) { // ændring 
             System.err.println("Du kan ikke trække fra beløbet");
         } else {
             System.err.println("Forkert indtastning");
