@@ -32,7 +32,14 @@ public class Billetautomat {
      * Modtag nogle penge (i kroner) fra en kunde.
      */
     public void indsætPenge(int beløb) {
-        balance = balance + beløb;
+        if (beløb > 0) {
+            balance = balance + beløb;
+
+        } else if (beløb < 0) { // ændring 
+            System.err.println("Du kan ikke trække fra beløbet");
+        } else {
+            System.err.println("Forkert indtastning");
+        }
     }
 
     /**
@@ -48,20 +55,21 @@ public class Billetautomat {
     public void udskrivBillet() {
         if (balance < 10) {
             System.out.println("Du mangler at indbetale nogle penge");
-        }
-        System.out.println("##########B##T#########");
-        System.out.println("# BlueJ Trafikselskab #");
-        System.out.println("#                     #");
-        System.out.println("#        Billet       #");
-        System.out.println("#        " + billetpris + " kr.       #");
-        System.out.println("#                     #");
-        System.out.println("##########B##T#########");
-        System.out.println("# Du har " + (balance - billetpris) + " kr til gode       #");
-        System.out.println("##########B##T#########");
-        System.out.println();
+        } else if (balance > 10) {
+            System.out.println("##########B##T#########");
+            System.out.println("# BlueJ Trafikselskab #");
+            System.out.println("#                     #");
+            System.out.println("#        Billet       #");
+            System.out.println("#        " + billetpris + " kr.       #");
+            System.out.println("#                     #");
+            System.out.println("##########B##T#########");
+            System.out.println("# Du har " + (balance - billetpris) + " kr til gode       #");
+            System.out.println("##########B##T#########");
+            System.out.println();
 
-        antalBilletterSolgt = antalBilletterSolgt + 1;
-        balance = balance - billetpris; // Billetter koster 10 kroner
+            antalBilletterSolgt = antalBilletterSolgt + 1;
+            balance = balance - billetpris; // Billetter koster 10 kroner
+        }
     }
 
     public int returpenge() {
@@ -123,4 +131,8 @@ public class Billetautomat {
     public boolean erMontør() {
         return montørtilstand;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 65f0df06ad7fe9d18628406bb70973f1fd9e2414

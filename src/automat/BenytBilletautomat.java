@@ -37,6 +37,7 @@ public class BenytBilletautomat {
                 }
                 case 2: {
                     automat.udskrivBillet();
+                    
                     break;
 
                 }
