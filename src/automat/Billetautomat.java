@@ -53,9 +53,15 @@ public class Billetautomat {
      * Udskriv en billet. Opdater total og nedskriv balancen med billetprisen
      */
     public void udskrivBillet() {
+
         if (balance < 9) {
             System.out.println("Du mangler at indbetale nogle penge");
         } else if (balance > 9) {
+
+        if (balance <= 9) {
+            System.out.println("Du mangler at indbetale nogle penge");
+        } else if (balance >= 10    ) {  
+
             System.out.println("##########B##T#########");
             System.out.println("# BlueJ Trafikselskab #");
             System.out.println("#                     #");
@@ -63,14 +69,21 @@ public class Billetautomat {
             System.out.println("#        " + billetpris + " kr.       #");
             System.out.println("#                     #");
             System.out.println("##########B##T#########");
+
             System.out.println("#    Beløb til gode:  #");
             System.out.println("#  "   + (balance - billetpris) + "kr               #");
+
+            System.out.println("#       Du har        #");
+            System.out.println("#        "+(balance - billetpris)+ " kr         #");
+            System.out.println("#      til gode       #");
+
             System.out.println("##########B##T#########");
             System.out.println();
 
             antalBilletterSolgt = antalBilletterSolgt + 1;
             balance = balance - billetpris; // Billetter koster 10 kroner
         }
+    }
     }
 
     public int returpenge() {
@@ -95,7 +108,7 @@ public class Billetautomat {
         if (montørtilstand) {
             return billetpris * antalBilletterSolgt;
         } else {
-            System.out.println("Afvist - log ind først");
+            System.err.println("Afvist - log ind først");
             return 0;
         }
     }
@@ -104,7 +117,7 @@ public class Billetautomat {
         if (montørtilstand) {
             return antalBilletterSolgt;
         } else {
-            System.out.println("Afvist - log ind først");
+            System.err.println("Afvist - log ind først");
             return 0;
         }
     }
@@ -117,7 +130,7 @@ public class Billetautomat {
         if (montørtilstand) {
             antalBilletterSolgt = 0;
         } else {
-            System.out.println("Afvist - log ind først");
+            System.err.println("Afvist - log ind først");
         }
     }
 
@@ -125,7 +138,7 @@ public class Billetautomat {
         if (montørtilstand) {
             this.antalBilletterSolgt = antalBilletterSolgt;
         } else {
-            System.out.println("Afvist - log ind først");
+            System.err.println("Afvist - log ind først");
         }
     }
 
